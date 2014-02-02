@@ -51,3 +51,22 @@ h2, h3, h4, h5 {
 }
 // FOR OUR LETTER GENERATOR:
 // font-family: 'Lora', serif;
+
+// TODO add different size logos using media queries
+.jumbotron h1 {
+  overflow: hidden;
+  background: image-url('power-icon.png') right top;
+  background-size: 128px 128px;
+  background-repeat: no-repeat;
+  color: #000000;
+  width: 600px;
+  height: 140px;
+  margin: 0;
+  letter-spacing: -4px;
+  font-size: 120px;
+  text-align: left;
+  span {
+    display: none;
+  }
+}
+
