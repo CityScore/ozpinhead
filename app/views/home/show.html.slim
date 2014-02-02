@@ -2,12 +2,22 @@
 	.col-md-2
 	.col-md-8
 		.jumbotron
-			h1= params[:id].titleize
+			h1= @city
 			.badge
   				.dotted
-  					- if params[:id] == 'san-diego'
+  					- if @city == 'San Diego'
 	    				.bubble data-icon='95'
 	    			- else
 	    				.bubble data-icon='55'
+
+
+	    	- if @city == 'San Diego'
+		    	p Congratulation, you live in one of the top cities. Share your success stories so others know what it takes to succeed.	
+		    	= link_to 'Share Your Story', new_story_url, class: 'button btn btn-primary'
+
+		   	- else
+		    	p It looks like your city could use some improvement. Why not contact your local politicians to see if we can improve this situation.
+		    	= link_to 'Contact Your Representatives', new_contact_url, class: 'button btn btn-primary'
+
 
    	.col-md-2

@@ -1,0 +1,15 @@
+.row
+	.col-md-2
+	.col-md-8
+		.jumbotron
+			h1 Share your story
+
+	    	p Congratulation, you live in one of the top cities. Share your success stories so others know what it takes to succeed.
+
+	    	== form_tag '/search', id: 'search', class: 'form-inline', method: :get do
+	    		
+				textarea#story_text.form-control placeholder='Share your success story...' name='story' rows='4'
+
+				button.btn.btn-lg.btn-success type='submit'
+					| Submit
+   	.col-md-2
