@@ -1,0 +1,16 @@
+.row
+	.col-md-2
+	.col-md-8
+		.jumbotron
+			h1 Contact your local politicians.
+
+
+		    p It looks like your city could use some improvement. Why not contact your local politicians to see if we can improve this situation.
+
+	    	== form_tag '/search', id: 'search', class: 'form-inline', method: :get do
+	    		
+				textarea#story_text.form-control placeholder='Share your success story...' name='story' rows='4'
+
+				button.btn.btn-lg.btn-success type='submit'
+					| Submit
+   	.col-md-2
