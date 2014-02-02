@@ -11,7 +11,7 @@
 	.col-md-8
 		== form_tag '/search', id: 'search', class: 'form-inline', method: :get do
 			.form-group
-				input#search_input.form-control.input-lg placeholder='Search for a city...'
+				input#search_input.form-control.input-lg placeholder='Search for a city...' name='city'
 			button.col-md-offset-1.btn.btn-lg.btn-success type='submit'
 				| Search
 	.col-md-2
