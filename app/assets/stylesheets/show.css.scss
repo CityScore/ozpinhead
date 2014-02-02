@@ -1,0 +1,99 @@
+/* General Styles */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.city { float:right; width: 128px; }
+
+
+/* Mixins */
+/* Variables */
+/* Bagde Styles */
+.badge {
+  background-color: #efefef;
+  height: 106px;
+  position: relative;
+  width: 100px;
+  margin: 1em auto;
+}
+.badge .dotted {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0px 2px 10px 1px rgba(0, 0, 0, 0.5), inset 0px 0px 5px 1px rgba(0, 0, 0, 0.4);
+  background: white;
+}
+.badge .dotted:before, .badge .dotted:after {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: absolute;
+  border-radius: 50%;
+}
+.badge .dotted:before {
+  content: "";
+  z-index: 2;
+  top: 5px;
+  width: 90px;
+  height: 90px;
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.8), inset 0px 0px 5px 1px rgba(0, 0, 0, 0.4);
+  background: #2989d8;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF7ABCFF', endColorstr='#FF4096EE');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7fb9e8), color-stop(60%, #54a1e0), color-stop(100%, #2989d8));
+  background-image: -webkit-linear-gradient(top, #7fb9e8 0%, #54a1e0 60%, #2989d8 100%);
+  background-image: -moz-linear-gradient(top, #7fb9e8 0%, #54a1e0 60%, #2989d8 100%);
+  background-image: -o-linear-gradient(top, #7fb9e8 0%, #54a1e0 60%, #2989d8 100%);
+  background-image: linear-gradient(top, #7fb9e8 0%, #54a1e0 60%, #2989d8 100%);
+}
+.badge .dotted:after {
+  content: "";
+  z-index: 3;
+  top: 10px;
+  width: 80px;
+  height: 80px;
+  border: 1px dashed white;
+  font-size: 50px;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 0px 4px #262626;
+  padding-top: 8px;
+  padding-right: 2px;
+}
+.badge .bubble {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  position: relative;
+  z-index: 4;
+  top: 25px;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.4);
+}
+.badge .bubble:before {
+  content: attr(data-icon);
+  text-align: center;
+  font-size: 25px;
+  color: #2989d8;
+  display: block;
+  padding-top: 11px;
+  padding-right: 2px;
+}
